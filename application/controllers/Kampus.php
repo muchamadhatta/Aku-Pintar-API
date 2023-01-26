@@ -34,7 +34,11 @@ class Kampus extends REST_Controller
         $data = array(
             'kampus_id' => $this->post('kampus_id'),
             'nama_kampus' => $this->post('nama_kampus'),
-            'jurusan' => $this->post('jurusan')
+            'jurusan' => $this->post('jurusan'),
+            'politeknik' => $this->post('politeknik'),
+            'provinsi' => $this->post('provinsi'),
+            'status' => $this->post('status'),
+            'tipe' => $this->post('tipe')
         );
         $insert = $this->db->insert('kampus', $data);
         if ($insert) {
@@ -51,7 +55,11 @@ class Kampus extends REST_Controller
         $data = array(
             'kampus_id' => $this->put('kampus_id'),
             'nama_kampus' => $this->put('nama_kampus'),
-            'jurusan' => $this->put('jurusan')
+            'jurusan' => $this->put('jurusan'),
+            'politeknik' => $this->post('politeknik'),
+            'provinsi' => $this->post('provinsi'),
+            'status' => $this->post('status'),
+            'tipe' => $this->post('tipe')
         );
         $this->db->where('kampus_id', $kampus_id);
         $update = $this->db->update('kampus', $data);

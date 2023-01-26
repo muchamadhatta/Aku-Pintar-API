@@ -67,23 +67,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
-
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
-
+<form action="<?php echo base_url('search_kampus/search') ?>" method="get">
+    <label for="kampus_id">ID Kampus</label>
+    <input type="text" name="kampus_id" id="kampus_id">
+    <br>
+    <label for="nama_kampus">Nama Kampus</label>
+    <input type="text" name="nama_kampus" id="nama_kampus">
+    <br>
+    <label for="jurusan">Jurusan</label>
+    <input type="text" name="jurusan" id="jurusan">
+    <br>
+    <label for="politeknik">Politeknik</label>
+    <input type="text" name="politeknik" id="politeknik">
+    <br>
+    <label for="provinsi">Provinsi</label>
+    <input type="text" name="provinsi" id="provinsi">
+    <br>
+    <label for="status">Status</label>
+    <input type="text" name="status" id="status">
+    <br>
+    <label for="tipe">Tipe</label>
+    <input type="text" name="tipe" id="tipe">
+    <br>
+    <button type="submit">Cari</button>
+</form>
 </body>
 </html>
